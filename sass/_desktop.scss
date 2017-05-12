@@ -1,0 +1,334 @@
+@import 'bourbon/bourbon';
+@import 'variables';
+
+.desktop {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/wallpaper.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 3;
+    
+    .desktop-area {
+        width: 100%;
+    }
+    
+    .icon-grid-set {
+        margin: 0;
+        padding: 0;
+        z-index: 4;
+        text-overflow: ellipsis;
+        
+        li.ui-selecting {
+            background-color: rgba(255,255,255,0.2);
+            border: solid 2px / 768px * 100vh rgba(127,200,255,0.3);
+        }
+        li.ui-selected {
+            background-color: rgba(255,255,255,0.5);
+            border: solid 2px / 768px * 100vh rgba(127,200,255,0.3);
+        }
+        
+        li {
+            list-style-type: none;
+            text-align: center;
+            display: block;
+            float: left;
+            padding: 4px / 768px * 100vh;
+            margin: 10px / 768px * 100vh 2px / 768px * 100vh;
+            border: solid 2px / 768px * 100vh transparent;
+            @include transition(background-color 250ms);
+        }
+        
+        li:nth-child(2n+1) {
+            clear: left;
+        }
+        
+        li:nth-child(2n) {
+            clear: right;
+        }
+        
+        li:hover {
+            @extend li.ui-selecting;
+        }
+        
+        .active {
+            @extend li.ui-selected;
+        }
+        
+        i {
+            display: block;
+        }
+        
+        .icon-text {
+            font-family: $primary-font;
+            text-shadow: 2px / 768px * 100vh 2px / 768px * 100vh 1px / 768px * 100vh #000;
+        }
+        
+        .brackets img {
+            width: 75%;
+            height: 75%;
+            display: inline-block;
+            vertical-align: baseline;
+        }
+    }
+    
+    .large-icons li {
+        width: 175px / 768px * 100vh;
+        height: 185px / 768px * 100vh;
+        
+        i {
+            font-size: 125px / 768px * 100vh;
+        }
+        
+        .icon-text {
+            font-size: 24px / 768px * 100vh;
+        }
+    }
+    
+    .medium-icons li {
+        width: 80px / 768px * 100vh;
+        height: 90px / 768px * 100vh;
+        
+        i {
+            font-size: 42px / 768px * 100vh;
+        }
+        
+        .icon-text {
+            font-size: 16px / 768px * 100vh;
+        }
+    }
+    
+    .small-icons li {
+        width: 50px / 768px * 100vh;
+        height: 70px / 768px * 100vh;
+        
+        i {
+            font-size: 28px / 768px * 100vh;
+        }
+        
+        .icon-text {
+            font-size: 11px / 768px * 100vh;
+        }
+    }
+}
+
+.taskbar {
+    position: absolute;
+    left: 0vw;
+    bottom: 0vh;
+    width: 100%;
+    height: $taskbar-height;
+    box-shadow: 0 2px / 768px * 100vh 4px / 768px * 100vh 1px / 768px * 100vh #000;
+    background-color: rgba(45, 137, 239, 0.48);
+    @include transition(bottom 400ms);
+    z-index: 11;
+
+    .start-button {
+        width: 52px / 768px * 100vh;
+        display: block;
+        float: left;
+        text-align: center;
+        padding: 6px / 768px * 100vh 0;
+        
+        i {
+            font-size: 28px / 768px * 100vh;
+            display: block;
+        }
+    }
+    
+    .start-button:hover {
+        background-color: #212121;
+    }
+
+    .start-button:hover .ion-social-windows {
+        color: $faded-bg-color;
+    }
+    
+    .app-icon-set {
+        margin: 0;
+        padding: 0;
+        float: left;
+        display: block;
+        text-align: center;
+        @include transition(background-color 100ms);
+        
+        li {
+            width: 25px / 768px * 100vh;
+            float: left;
+            list-style-type: none;
+            margin-left: 1px / 768px * 100vh;
+            margin-right: 1px / 768px * 100vh;
+            padding: 1px / 768px * 100vh 16px / 768px * 100vh 4px / 768px * 100vh ;
+            border: solid 1px transparent;
+            border-radius: 4px / 768px * 100vh;
+            @include transition(all 200ms);
+        }
+        
+        li:hover {
+            box-shadow: inset 0 0 50px / 768px * 100vh rgba(255, 255, 255, 0.8);
+            border: solid 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        .active {
+            box-shadow: inset 0 0 50px / 768px * 100vh rgba(255, 255, 255, 0.4);
+            border: solid 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        i {
+            font-size: 32px / 768px * 100vh;
+            display: block;
+        }
+    }
+
+    .charms-bar-activator-placer {
+        float: right;
+        width: 15px / 768px * 100vh;
+        height: 100%;
+        padding: 4px / 768px * 100vh 0;
+        margin-right: 2px / 768px * 100vh;
+    }
+    
+    .date-time {
+        float: right;
+        text-align: center;
+        font-size: 12px / 768px * 100vh;
+        padding: 4px / 768px * 100vh 0;
+        margin-right: 2px / 768px * 100vh;
+    }
+    
+    .notification-area {
+        margin: 0;
+        padding: 0;
+        float: right;
+        
+        li {
+            float: right;
+            list-style-type: none;
+            margin-top: 2.5px / 768px * 100vh;
+            padding: 6px / 768px * 100vh;
+            border-left: solid 1px / 768px * 100vh transparent;
+            border-right: solid 1px / 768px * 100vh transparent;
+            @include transition(border 200ms);
+        }
+        
+        li:first-child {
+            margin-right: 16px / 768px * 100vh;
+        }
+        
+        li:hover {
+            border-left: solid 1px / 768px * 100vh rgba(0, 0, 0, 0.2);
+            border-right: solid 1px / 768px * 100vh rgba(0, 0, 0, 0.2);
+        }
+        
+        i {
+            font-size: 16px / 768px * 100vh;
+        }
+    }
+}
+
+
+.charms-bar {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -85px / 768px * 100vh;
+    width: 85px / 768px * 100vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    @include transition(background-color 200ms, right 400ms);
+    z-index: 12;
+    
+    li {
+        display: block;
+        position: relative;
+        top: 50vh;
+        list-style-type: none;
+        margin: 0;
+        padding: 18px / 768px * 100vh 0;
+        text-align: center;
+    }
+    
+    li:first-child {
+        margin-top: -252px / 768px * 100vh;
+    }
+    
+    li:hover {
+        background-color: #424242;
+    }
+    
+    i {
+        display: block;
+        color:  #fff;
+        font-size: $font-scale-large;
+    }
+    
+    .text {
+        visibility: hidden;
+        @include user-select(none);
+        cursor: default;
+    }
+}
+
+.charms-bar:hover {
+    background-color: #212121;
+    
+    .text {
+        visibility: visible;
+    }
+    
+    .ion-social-windows {
+        color: $faded-bg-color;
+    }
+}
+
+.charms-info {
+    display: none;
+    position: absolute;
+    bottom: 48px / 768px * 100vh;
+    left: 50px / 768px * 100vh;
+    width: 412px / 768px * 100vh;
+    height: 140px / 768px * 100vh;
+    background: #212121;
+    z-index: 12;
+    
+    .icon-set {
+        font-size: 30px / 768px * 100vh;
+        padding: 5px / 768px * 100vh;
+        margin: 20px / 768px * 100vh 10px / 768px * 100vh 20px / 768px * 100vh 24px / 768px * 100vh;
+        float: left;
+    }
+    
+    .time {
+        font-size: 520%;
+        float: left;
+        margin-top: 10px / 768px * 100vh;
+        margin-right: 15px / 768px * 100vh;
+    }
+
+    .date {
+        font-size: 180%;
+        padding: 30px / 768px * 100vh 0;
+    }
+}
+
+.charms-bar-activator-top,
+.charms-bar-activator-bottom {
+    position: absolute;
+    width: 15px / 768px * 100vh;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.charms-bar-activator-top {
+    top: 0;
+    right: 0;
+    height: 15px / 768px * 100vh;
+}
+
+.charms-bar-activator-bottom {
+    bottom: 0;
+    right: 0;
+    height: 40px / 768px * 100vh;
+}

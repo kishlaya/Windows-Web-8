@@ -1,0 +1,285 @@
+@import 'variables';
+@import 'bourbon/bourbon';
+
+.logon-splash-screen {
+    width: 100%;
+    height: 100vh;
+    top: 0vh;
+    background-image: url('../img/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    @include transition(all 500ms $ease-out-quad);
+    
+    .date-time {
+        position: absolute;
+        top: 50vh;
+        left: 6vw;
+    }
+    
+    .time {
+        font-size: 900%;
+    }
+    
+    .date {
+        font-size: 350%;
+    }
+    
+    .icon-set {
+        position: absolute;
+        bottom: 5vh;
+        left: 6vw;
+        
+        p {
+            display: inline-block;
+            padding: 12px / 768px * 100vh 16px / 768px * 100vh;
+            font-size: $font-scale-small;
+        }
+    }
+}
+
+.user-logon-screen {
+    width: 100%;
+    height: 100vh;
+    top: 0vh;
+    z-index: 1;
+    background-color: $bg-color;
+    
+    .user-info {
+        position: absolute;
+        height: 27vh;
+        
+        .back {
+            float: left;
+            font-size: $font-scale-small;
+            margin-right: 25px / 1366px * 100vw;
+            border: solid 2px / 768px * 100vh $font-color;
+            border-radius: 100%;
+            padding: 0 7px / 768px * 100vh;
+            color: $font-color;
+            @include transition(background-color 250ms);
+        }
+        
+        .back:hover {
+            background-color: $faded-bg-color;
+        }
+        
+        .back:active,
+        .back:focus {
+            color: $bg-color;
+            background-color: #fff;
+        }
+        
+        .profile-picture {
+            width: 30%;
+            height: 100%;
+            margin-right: 20px / 1366px * 100vw;
+        }
+        
+        .details {
+            width: 50%;
+        }
+        
+        .name {
+            font-size: $font-scale-medium;
+        }
+        
+        .status {
+            color: $faded-font-color;
+        }
+        
+        .password-holder,
+        .caps-warning,
+        .success-box,
+        .error-box {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: 25px / 768px * 100vh;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            color: $alternate-font-color;
+            border: none;
+            @include box-sizing(border-box);
+            font-family: $helvetica;
+        }
+        
+        input[type="password"]::selection {
+            color: $font-color;
+            background-color: $faded-bg-color;
+        }
+        
+        input[type="password"]::-moz-selection {
+            color: $font-color;
+            background-color: $faded-bg-color;
+        }
+        
+        .enter-password {
+            display: inline-block;
+            position: absolute;
+            top: 2px / 768px * 100vh;
+            right: 2px / 768px * 100vh;
+            font-weight: bolder;
+            color: $font-color;
+            background-color: $bg-color;
+            @include transition(background-color 250ms);
+        }
+        
+        .enter-password:hover {
+            background-color: $faded-bg-color;
+        }
+        
+        .caps-warning,
+        .success-box,
+        .error-box {
+            display: none;
+        }
+        
+        .loader {
+            display: inline-block;
+            vertical-align: text-bottom;
+        }
+        
+        .wInnerBall {
+            width: 3px / 768px * 100vh;
+            height: 3px / 768px * 100vh;
+        }
+        
+        .success-box p {
+            font-size: $font-scale-medium;
+            margin-left: 50px / 768px * 100vh;
+        }
+        
+        .error-msg {
+            color: #ff0;
+        }
+        
+        .btn-error {
+            display: block;
+            width: 75px / 768px * 100vh;
+            padding: 2px / 768px * 100vh 8px / 768px * 100vh;
+            text-align: center;
+            margin: 10px / 768px * 100vh 0;
+            border: solid 2px / 768px * 100vh $font-color;
+            background-color: $bg-color;
+            @include transition(background-color 250ms);
+        }
+        .btn-error:hover {
+            background-color: $faded-bg-color;
+        }
+    }
+    
+    .icon-set {
+        position: absolute;
+        bottom: 5vh;
+        left: 4vw;
+        
+        p {
+            font-size: $font-scale-small;
+            display: inline-block;
+            padding: 12px / 768px * 100vh 16px / 768px * 100vh;
+            margin-right: 10px / 768px * 100vh;
+            background-color: $bg-color;
+            @include transition(background-color 250ms);
+        }
+        
+        p:hover {
+            background-color: $faded-bg-color;
+        }
+    }
+    
+    .power-button {
+        position: absolute;
+        bottom: 5vh;
+        right: 2vw;
+        font-size: $font-scale-small;
+        display: inline-block;
+        padding: 12px / 768px * 100vh 16px / 768px * 100vh;
+    }
+    
+    .power-button:hover {
+        background-color: $faded-bg-color;
+    }
+    
+    .power-dropdown {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        bottom: 12vh;
+        right: 2px / 768px * 100vh;
+        margin: 0;
+        padding: 8px / 768px * 100vh 0;
+        color: $alternate-font-color;
+        background-color: $font-color;
+        @include transform(translateY(20px / 768px * 100vh));
+        @include transition(opacity 400ms, transform 600ms);
+        
+        li {
+            list-style-type: none;
+            display: block;
+            font-weight: bold;
+            padding: 10px / 768px * 100vh 20px / 768px * 100vh;
+            @include transition(background-color 250ms);
+        }
+        
+        li:hover {
+            background-color: $faded-font-color;
+        }
+        
+        .disabled {
+            color: #999;
+        }
+        
+        .disabled:hover {
+            background-color: transparent;
+        }
+    }
+    
+    .show-power-dropdown {
+        z-index: inherit;
+        @include transform(translateY(0px));
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .user-info {    
+        top: 22vh;
+        left: 50vw;
+        width: 50vw;
+        margin-left: -24vw;
+        
+        .profile-picture,
+        .details {
+            float: left;
+        }
+        
+        input[type="password"] {
+            padding: 6px / 768px * 100vh 10px / 768px * 100vh;
+        }
+        
+        .enter-password {
+            padding: 2px / 768px * 100vh 6px / 768px * 100vh 3px / 768px * 100vh 8px / 768px * 100vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .user-info {    
+        top: 10vh;
+        left: 10vw;
+        width: 90vw;
+        margin-left: 10vw;
+        font-size: 16px;
+        
+        input[type="password"] {
+            padding: 15px / 768px * 100vh 6px / 768px * 100vh 15px / 768px * 100vh 15px / 768px * 100vh;
+        }
+            
+        .enter-password {
+            padding: 10px / 768px * 100vh 30px / 768px * 100vh;
+        }
+    }
+}

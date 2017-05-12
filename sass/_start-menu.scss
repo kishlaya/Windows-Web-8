@@ -1,0 +1,209 @@
+.start-menu {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/start-menu-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 9;
+
+    .info {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        @include box-sizing(border-box);
+        padding: 5vh 4vw 5vh 8vw;
+        z-index: 11;
+        
+        h1 {
+            font-size: 56px / 768px * 100vh;
+            float: left;
+        }
+        
+        .user {
+            float: right;
+            width: 150px / 768px * 100vh;
+            height: 50px / 768px * 100vh;
+            padding: 5px / 768px * 100vh 25px / 768px * 100vh 10px / 768px * 100vh;
+            background-color: transparent;
+        }
+        
+        .user:hover {
+            background-color: $faded-bg-color;
+        }
+        
+        h2 {
+            font-size: 24px / 768px * 100vh;
+            float: right;
+            text-align: right;
+            margin-right: 10px / 768px * 100vh;
+        }
+        
+        h2 span {
+            font-size: 16px  / 768px * 100vh;
+            position: relative;
+            top: -10px / 768px * 100vh;
+        }
+        
+        img {
+            width: 50px / 768px * 100vh;
+            height: 50px / 768px * 100vh;
+            float: right;
+        }
+        
+        .user-menu-dropdown {
+            opacity: 0;
+            position: absolute;
+            top: -100%;
+            right: 4vw;
+            margin: 0;
+            padding: 8px / 768px * 100vh 0;
+            float: right;
+            color: $alternate-font-color;
+            background-color: $font-color;
+            @include transform(translateY(-20px / 768px * 100vh));
+            @include transition(opacity 400ms, transform 600ms);
+
+            li {
+                list-style-type: none;
+                display: block;
+                font-weight: bold;
+                white-space: nowrap;
+                padding: 10px / 768px * 100vh 50px / 768px * 100vh 10px / 768px * 100vh 20px / 768px * 100vh;
+                @include transition(background-color 250ms);
+            }
+            
+            li:hover {
+                background-color: $faded-font-color;
+            }
+            
+            .disabled {
+                color: #999;
+            }
+
+            .disabled:hover {
+                background-color: transparent;
+            }
+        }
+        
+        .show-user-menu-dropdown {
+            top: 105px / 768px * 100vh;
+            opacity: 1;
+            @include transform(translateY(0px / 768px * 100vh));
+        }
+    }
+    
+    .metro-ui {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        @include box-sizing(border-box);
+        padding: 2vh 8vw;
+        z-index: 10;
+    }
+    
+    .metro-ui-grid {
+        opacity: 0;
+        display: inline-block;
+        height: 520px / 768px * 100vh;
+        margin: 0;
+        padding: 0;
+        margin-right: 50px / 768px * 100vh;
+        vertical-align: top;
+        @include transform(translateX(100px / 768px * 100vh) scale(0.75));
+        @include transition(all 600ms);
+        
+        li {
+            position: relative;
+            width: 250px / 768px * 100vh;
+            height: 120px / 768px * 100vh;
+            list-style-type: none;
+            margin: 4px / 768px * 100vh;
+            float: left;
+            text-align: center;
+            border: solid 1px / 768px * 100vh transparent;
+        }
+        
+        li:hover {
+            border: solid 1px / 768px * 100vh #999;
+        }
+        
+        li:active, li:focus {
+            border: solid 2px / 768px * 100vh #999;
+            width: 240px / 768px * 100vh;
+            height: 110px / 768px * 100vh;
+            margin: 8px / 768px * 100vh;
+        }
+        
+        .small {
+            width: 120px / 768px * 100vh;
+        }
+        
+        .small:active, .small:focus {
+            width: 110px / 768px * 100vh;
+            height: 110px / 768px * 100vh;
+            margin: 8px / 768px * 100vh;
+        }
+        
+        .desktop-tile {
+            background-image: url('../img/wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .ionicons {
+            display: block;
+            margin: 5px / 768px * 100vh auto;
+            font-size: 500%;
+        }
+        
+        .text {
+            position: absolute;
+            left: 10px / 768px * 100vh;
+        }
+    }
+    
+    .grid-1 {
+        width: 800px / 768px * 100vh;
+    }
+    
+    .grid-2 {
+        width: 280px / 768px * 100vh;
+    }
+    
+    .grid-3 {
+        width: 1050px / 768px * 100vh;
+    }
+    
+    .activate-metro-ui-grid {
+        opacity: 1;
+        @include transform(translateX(0px) scale(1));
+    }
+    
+    .desktop-activator {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 52px / 768px * 100vh;
+        height: $taskbar-height;
+        text-align: center;
+        font-size: 28px / 768px * 100vh;
+        background-color: #212121;
+        @include transition(opacity 250ms);
+        z-index: 13;
+        
+        .ion-social-windows {
+            color: $faded-bg-color;
+        }
+    }
+
+    .desktop-activator:hover {
+        opacity: 1;
+    }
+}

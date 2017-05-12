@@ -1,0 +1,282 @@
+@import 'bourbon/bourbon';
+@import 'variables';
+
+.app {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    color: $alternate-font-color;
+    border-top: none;
+    border-bottom: solid 8px / 768px * 100vh $brand-color;
+    border-left: solid 8px / 768px * 100vh $brand-color;
+    border-right: solid 8px / 768px * 100vh $brand-color;
+    background-color: $font-color;
+    box-shadow: 0 0 1px / 768px * 100vh #000;
+    @include box-sizing(border-box);
+    padding: 30px / 768px * 100vh 0 0;
+    @include transform(scale(1));
+    @include transition(transform 200ms);
+
+    .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 18px / 768px * 100vh;
+        text-align: center;
+        padding: 2px / 768px * 100vh 0 4px / 768px * 100vh;
+        background-color: $brand-color;
+    }
+    
+    .action-buttons {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        li {
+            float: right;
+            list-style-type: none;
+            font-weight: bolder;
+        }
+        
+        .close {
+            @extend .red;
+            padding: 0 20px / 768px * 100vh;
+            color: #fff;
+        }
+        
+        .close:hover {
+            @extend .lightRed;
+        }
+        
+        .minimize, .maximize {
+            padding: 0 10px / 768px * 100vh;
+            color: #000;
+        }
+        
+        .minimize:hover, .maximize:hover {
+            @extend .darkBlue;
+            color: #fff;
+        }
+        
+        .disabled {
+            background: transparent;
+            color: #777;
+        }
+        
+        .disabled:hover {
+            background: transparent;
+            color: #777;
+        }
+    }
+    
+    .head {
+        text-align: center;
+        font-size: 250%;
+    }
+    
+    .divider {
+        border-bottom: solid 1px $alternate-font-color;
+        margin: 25px / 768px * 100vh auto;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        @include box-sizing(border-box);
+        padding: 20px / 768px * 100vh 50px / 768px * 100vh;
+    }
+    
+    .btn-ok {
+        float: right;
+        padding: 2px 30px;
+        border-radius: 2px;
+        font-weight: normal;
+        border: none;
+        -webkit-box-shadow: 0 0 1px 1px #006699;
+           -moz-box-shadow: 0 0 1px 1px #006699;
+                box-shadow: 0 0 1px 1px #006699;
+        @include background(linear-gradient(#fff, #ddd) top no-repeat);
+        @include transition(all 250ms);
+    }
+    
+    .btn-ok:hover {
+        @include background(linear-gradient(#ddd, #fff) top no-repeat);
+    }
+    
+    .btn-ok:active, .btn-ok:focus {
+        background: #ddd;
+    }
+}
+
+.about {
+    top: 10vh;
+    left: 5vw;
+    width: 680px / 768px * 100vh;
+    z-index: 5;
+    
+    .head {
+        color: $windows-color;
+    }
+}
+
+.specifics {
+    top: 5vh;
+    left: 35vw;
+    width: 800px / 768px * 100vh;
+    height: 600px / 768px * 100vh;
+    z-index: 5;
+    
+    h2 {
+        margin-top: 15px / 768px * 100vh;
+    }
+    
+    .built {
+        text-align: center;
+        font-size: 20px / 768px * 100vh;
+        vertical-align: top;
+        margin: 25px / 768px * 100vh auto;
+        
+        .ionicons {
+            font-size: 30px / 768px * 100vh;
+        }
+    }
+}
+
+.copyright {
+    top: 55vh;
+    left: 20vw;
+    z-index: 5;
+}
+
+.share {
+    top: 32vh;
+    right: 10vw;
+    z-index: 5;
+    
+    .head {
+        color: #32cd32;
+    }
+}
+
+.alert {
+    top: 15vh;
+    left: 36vw;
+    z-index: 7;
+    
+    .ion-alert {
+        color: red;
+        font-size: 24px / 768px * 100vh;
+    }
+}
+
+$inactive-color: #eee;
+
+.inactive {
+    z-index: 4;
+    border-top: none;
+    border-bottom: solid 8px / 768px * 100vh $inactive-color;
+    border-left: solid 8px / 768px * 100vh $inactive-color;
+    border-right: solid 8px / 768px * 100vh $inactive-color;
+    
+    .title {
+        background-color: $inactive-color;
+    }
+    
+    .close {
+        background: #999 !important;
+    }
+    
+    .close:hover {
+        background: #da5a53 !important;
+    }
+}
+
+.context-menu {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 12px / 768px * 100vh;
+    font-weight: normal;
+    color: $alternate-font-color;
+    background-color: $font-color;
+    box-shadow: 2px / 768px * 100vh 2px / 768px * 100vh 5px / 768px * 100vh rgba(0, 0, 0, 0.8);
+    border: solid 1px rgba(0, 0, 0, 0.4);
+    padding: 2px / 768px * 100vh;
+    z-index: -10;
+
+    > li {
+        position: relative;
+        padding: 2px / 768px * 100vh 75px / 768px * 100vh 2px / 768px * 100vh 30px / 768px * 100vh;
+        list-style-type: none;
+        border: solid 1px transparent;
+        
+        ul {
+            display: none;
+            position: absolute;
+            top: -5px / 768px * 100vh;
+            left: 100%;
+            margin: 0;
+            white-space: nowrap;
+            font-size: 12px / 768px * 100vh;
+            font-weight: normal;
+            color: $alternate-font-color;
+            background-color: $font-color;
+            border: solid 1px rgba(0, 0, 0, 0.4);
+            padding: 1px / 768px * 100vh;
+            box-shadow: 2px / 768px * 100vh 2px / 768px * 100vh 5px / 768px * 100vh rgba(0, 0, 0, 0.8);
+            
+            li {
+                list-style-type: none;
+                border: solid 1px transparent;
+                padding: 2px / 768px * 100vh 50px / 768px * 100vh 2px / 768px * 100vh 30px / 768px * 100vh;
+            }
+        }
+    }
+
+    li:hover {
+        background-color: #def;
+        border: solid 1px #00bfff;
+        
+        ul {
+            display: block;
+        }
+    }
+
+    li.disabled {
+        color: #999;
+    }
+
+    li.disabled:hover {
+        background-color: #eee;
+        border: solid 1px #999;
+    }
+
+    li.divider {
+        height: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+        margin-bottom: 4px / 768px * 100vh;
+        background-color: transparent;
+    }
+
+    li.divider:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+    }
+
+    i {
+        position: absolute;
+        right: 5px / 768px * 100vh;
+    }
+}

@@ -1,0 +1,92 @@
+$primary-font: "Segoe UI", "Open Sans", serif;
+$taskbar-height: 40px / 768px * 100vh;
+$brand-color: rgba(27, 161, 226, 0.7);
+$windows-color: #00bcf2;
+$bg-color: #180052;
+$faded-bg-color: #4617b4;
+$font-color: #fff;
+$alternate-font-color: #000;
+$faded-font-color: #c1c1c1;
+$font-scale-small: 24px / 768px * 100vh;
+$font-scale-medium: 1.62 * (16px / 768px) * 100vh;
+$font-scale-large: 2.75 * (16px / 768px) * 100vh;
+
+
+// COLORS
+
+.brand {
+  background: $brand-color;
+}
+
+.green {
+  background: #32cd32;
+}
+.emerald {
+  background: #008a00;
+}
+.teal {
+  background: #00aba9;
+}
+.cobalt {
+  background: #0050ef;
+}
+.indigo {
+  background: #6a00ff;
+}
+.violet {
+  background: #aa00ff;
+}
+.pink {
+  background: #dc4fad;
+}
+.magenta {
+  background: #d80073;
+}
+.crimson {
+  background: #a20025;
+}
+.red {
+  background: #ce352c;
+}
+.orange {
+  background: #fa6800;
+}
+.amber {
+  background: #f0a30a;
+}
+.gray {
+  background: #555555;
+}
+.darkIndigo {
+  background: #4b0096;
+}
+.darkCyan {
+  background: #1b6eae;
+}
+.darkCobalt {
+  background: #00356a;
+}
+.darkTeal {
+  background: #004050;
+}
+.darkViolet {
+  background: #57169a;
+}
+.darkBlue {
+  background: #16499a;
+}
+.lightBlue {
+  background: #4390df;
+}
+.lightRed {
+  background: #da5a53;
+}
+.loveRed {
+  background: #ff0000;
+}
+.lighterBlue {
+  background: #00ccff;
+}
+.blue {
+  background: #00aff0;
+}
