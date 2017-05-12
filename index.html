@@ -1,0 +1,430 @@
+<!-- The MIT License (MIT)
+
+Copyright (c) Wed Jun 17 2015 Kishlaya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORTOR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="WIndows Web 8.0 | Kishlaya Jaiswal" />
+        <meta property="og:description" content="The web version for your windows 8.0" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Windows Web 8.0" />
+        <meta property="og:image" content="img/logo.png" />
+        <title>Windows Web 8.0 | Kishlaya Jaiswal</title>
+        <link rel="icon" type="image/x-icon" href="img/logo.png">
+        <link rel="apple-touch-icon" href="img/logo.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="img/logo.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="img/logo.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="img/logo.png" />
+        <link rel="canonical" href="http://decode.esy.es" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" type="text/css" rel="stylesheet" lang="en">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css" rel="stylesheet" lang="en">
+        <link href="css/main.min.css" type="text/css" rel="stylesheet" lang="en">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+    </head>
+    <body>        
+        <!-- BOOT -->
+        <div class="boot-screen">
+            <img src="img/logo.png" class="boot-logo">
+            <div class="loader">
+                <div class="wBall" id="wBall_1">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                    <div class="wInnerBall"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LOGON -->
+        <div class="logon-splash-screen">
+            <div class="date-time">
+                <p class="time"></p>
+                <p class="date"></p>
+            </div>
+            <div class="icon-set">
+                <p><i class="ionicons ion-connection-bars"></i></p>
+                <p><i class="ionicons ion-battery-half"></i></p>
+            </div>
+        </div>
+        
+        <div class="user-logon-screen">
+            <div class="user-info">
+                <a href="#" class="back" data-tooltip="Switch User"><i class="ionicons ion-arrow-left-c"></i></a>
+                <img class="profile-picture" src="img/user.png">
+                <div class="details">
+                    <p class="name">Kishlaya Jaiswal</p>
+                    <p class="email">kishlaya@outlook.com</p>
+                    <p class="status">Locked</p>
+                    <!-- PASSWORD -->
+                    <div class="password-holder">
+                        <input type="password" placeholder="Password" class="password-field" title="Password : admin" tabindex="1" autocomplete="off">
+                        <a href="#" class="enter-password" data-tooltip="Submit"><i class="ionicons ion-arrow-right-c"></i></a>
+                        <p>Hint: password is 'admin'</p>
+                    </div>
+                    <div class="caps-warning">
+                        <p class="error-msg">Caps Lock is on</p>
+                    </div>
+                    <!-- SUCCESS -->
+                    <div class="success-box">
+                        <div class="loader">
+                            <div class="wBall" id="wBall_1">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_2">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_3">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_4">
+                                <div class="wInnerBall"></div>
+                            </div>
+                            <div class="wBall" id="wBall_5">
+                                <div class="wInnerBall"></div>
+                            </div>
+                        </div>
+                        <p>Welcome</p>
+                    </div>
+                    <!-- ERROR -->
+                    <div class="error-box">
+                        <p class="error-msg"></p>
+                        <a href="#" class="btn-error" tabindex="2">OK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-set">
+                <p data-tooltip="Ease of access"><i class="ionicons ion-loop"></i></p>
+                <p data-tooltip="Connect to internet"><i class="ionicons ion-connection-bars"></i></p>
+            </div>
+                <p data-tooltip="Shut down" class="power-button"><i class="ionicons ion-power"></i></p>
+            <ul class="power-dropdown">
+                <li class="disabled">Sleep</li>
+                <li class="disabled">Hibernate</li>
+                <li class="shutdown">Shutdown</li>
+                <li class="restart">Restart</li>
+            </ul>
+        </div>
+        
+        <!-- DESKTOP -->
+        <div class="desktop">
+           <div class="desktop-area">
+               <ul class="icon-grid-set medium-icons">
+                   <li class="brackets"><img src="img/brackets.png" alt="Brackets"><span class="icon-text">Brackets</span></li>
+                   <li><i class="ionicons ion-android-desktop" style="color:#def;"></i><span class="icon-text">My Computer</span></li>
+                   <li><i class="ionicons ion-folder" style="color:#f0e68c;"></i><span class="icon-text">My Documents</span></li>
+                   <li><i class="ionicons ion-gear-a" style="color:#d3d3d3;"></i><span class="icon-text">Control Panel</span></li>
+                   <li><i class="ionicons ion-email" style="color:#b0e0e6;"></i><span class="icon-text">Mail</span></li>
+                   <li><i class="ionicons ion-trash-b" style="color:#ccc;"></i><span class="icon-text">Recycle Bin</span></li>
+               </ul>
+           </div>        
+        </div>
+        
+        <!-- TASKBAR -->
+        <div class="taskbar desktop-element">
+            <div class="start-button"><i class="ionicons ion-social-windows"></i></div>
+            <ul class="app-icon-set">
+                <li class="about active"><i class="ionicons ion-ios-keypad" style="color: #ff0033;"></i></li>
+                <li class="specifics active"><i class="ionicons ion-settings" style="color: #000;"></i></li>
+                <li class="share active"><i class="ionicons ion-android-share-alt" style="color: #7fff00;"></i></li>
+                <li class="copyright active"><i class="ionicons ion-ios-copy" style="color: #fff;"></i></li>
+            </ul>
+            <div class="charms-bar-activator-placer"></div>
+            <div class="date-time">
+               <p class="time"></p>
+               <p class="date"></p>
+            </div>
+            <ul class="notification-area">
+                <li title="Speakers: 100%"><i class="ionicons ion-android-volume-up"></i></li>
+                <li title="80% remaining"><i class="ionicons ion-battery-half"></i></li>
+                <li title="Internet Access"><i class="ionicons ion-connection-bars"></i></li>
+                <li title="Action Center"><i class="ionicons ion-flag"></i></li>
+                <li title="Onedrive: Files are up to date"><i class="ionicons ion-cloud"></i></li>
+            </ul>
+        </div>
+        
+        <!-- CHARMS BAR -->
+        <ul class="charms-bar">
+            <li><i class="ionicons ion-ios-search-strong"></i><span class="text">Search</span></li>
+            <li><i class="ionicons ion-share"></i><span class="text">Share</span></li>
+            <li class="show-start-menu"><i class="ionicons ion-social-windows"></i><span class="text">Start</span></li>
+            <li><i class="ionicons ion-ipad"></i><span class="text">Devices</span></li>
+            <li><i class="ionicons ion-gear-a"></i><span class="text">Settings</span></li>
+        </ul>
+
+        <div class="charms-info">
+            <div class="icon-set">
+                <p><i class="ionicons ion-connection-bars"></i></p>
+                <p><i class="ionicons ion-battery-half"></i></p>
+            </div>
+            <div class="date-time">
+                <p class="time"></p>
+                <p class="date"></p>
+            </div>
+        </div>
+        
+        <div class="charms-bar-activator-top desktop-element"></div>
+        <div class="charms-bar-activator-bottom desktop-element"></div>
+        
+        <!-- START MENU -->
+        <div class="start-menu">
+            <div class="info">
+                <h1>Start</h1>
+                <div class="user">
+                    <img src="img/user.png" class="profile-pic">
+                    <h2>Kishlaya<br><span>Jaiswal</span></h2>
+                </div>
+                <ul class="user-menu-dropdown">
+                    <li class="disabled">Change account picture</li>
+                    <li class="lock">Lock</li>
+                    <li class="signout">Sign out</li>
+                </ul>
+            </div>
+            <div class="metro-ui">
+                <ul class="metro-ui-grid grid-1">
+                    <li class="teal"><i class="ionicons ion-email"></i><span class="text">Mail</span></li>
+                    <li class="indigo"><i class="ionicons ion-calendar"></i><span class="text">Calendar</span></li>
+                    <li class="small lighterBlue"><i class="ionicons ion-social-skype"></i><span class="text">Skype</span></li>
+                    <li class="small emerald"><i class="ionicons ion-android-playstore"></i><span class="text">Store</span></li>
+                    <li class="orange"><i class="ionicons ion-android-contacts"></i><span class="text">People</span></li>
+                    <li class="amber"><i class="ionicons ion-ios-partlysunny"></i><span class="text">Weather</span></li>
+                    <li class="small darkViolet"><i class="ionicons ion-android-map"></i><span class="text">Maps</span></li>
+                    <li class="small darkCyan"><i class="ionicons ion-cloud"></i><span class="text">OneDrive</span></li>
+                    <li class="violet"><i class="ionicons ion-chatbox-working"></i><span class="text">Messaging</span></li>
+                    <li class="green"><i class="ionicons ion-arrow-graph-up-right"></i><span class="text">Finance</span></li>
+                    <li class="magenta"><i class="ionicons ion-ios-basketball"></i><span class="text">Sports</span></li>
+                    <li class="desktop-tile" id="show-desktop"><i class="ionicons"></i><span class="text">Desktop</span></li>
+                    <li class="darkCobalt"><i class="ionicons ion-image"></i><span class="text">Photos</span></li>
+                    <li class="red"><i class="ionicons ion-ios-pulse"></i><span class="text">Health</span></li>
+                </ul>
+                <ul class="metro-ui-grid grid-2">
+                    <li class="pink"><i class="ionicons ion-search"></i><span class="text">Bing</span></li>
+                    <li class="teal"><i class="ionicons ion-bag"></i><span class="text">Travel</span></li>
+                    <li class="small emerald"><i class="ionicons ion-ios-game-controller-b"></i><span class="text">Games</span></li>
+                    <li class="small violet"><i class="ionicons ion-camera"></i><span class="text">Camera</span></li>
+                    <li class="small orange"><i class="ionicons ion-headphone"></i><span class="text">Music</span></li>
+                    <li class="small crimson"><i class="ionicons ion-social-youtube-outline"></i><span class="text">Video</span></li>
+                </ul>
+                <ul class="metro-ui-grid grid-3">
+                    <li class="orange"><i class="ionicons ion-social-html5"></i><span class="text">HTML5</span></li>
+                    <li class="blue"><i class="ionicons ion-social-css3"></i><span class="text">CSS3</span></li>
+                    <li class="magenta"><i class="ionicons ion-social-sass"></i><span class="text">SASS/SCSS</span></li>
+                    <li class="red"><i class="ionicons ion-ios-infinite"></i><span class="text">normalize.css</span></li>
+                    <li class="violet"><i class="ionicons ion-social-javascript"></i><span class="text">JS/jQuery/jQuery UI</span></li>
+                    <li class="darkTeal"><i class="ionicons ion-android-apps"></i><span class="text">Ionicons</span></li>
+                    <li class="darkBlue"><img src="img/brackets.png" style="width: 12vh; height: 12vh; display: inline-block;"><span class="text">Adobe Brackets</span></li>
+                    <li class="green"><i class="ionicons ion-android-share-alt"></i><span class="text">Share</span></li>
+                    <li class="teal"><i class="ionicons ion-code"></i><span class="text">Code</span></li>
+                    <li class="gray"><i class="ionicons ion-wrench"></i><span class="text">Front-End Tools</span></li>
+                    <li class="amber"><i class="ionicons ion-coffee"></i><span class="text">Coffee</span></li>
+                    <li class="loveRed"><i class="ionicons ion-android-favorite"></i><span class="text">Love</span></li>
+                </ul>
+            </div>
+            <div class="desktop-activator"><i class="ionicons ion-social-windows"></i></div>
+        </div>
+        
+        <!-- APPS -->
+        <div class="app about" id="about">
+            <div class="title">
+                <p>About Windows Web</p>
+            </div>
+            <ul class="action-buttons">
+                <li class="close" title="Close"><i class="ionicons ion-android-close"></i></li>
+            </ul>
+            <div class="container">
+                <p class="head"><i class="ionicons ion-social-windows"></i> Windows Web 8.0</p>
+                <div class="divider"></div>
+                <p>Microsoft Windows Web 8.0</p>
+                <p>Version 6.3 (Build 9375.0.x86fre.fbl_partner_out14.130328-1742).5c84e0f17a41ff9e</p>
+                <p>&copy; 2013 Microsoft Corporation. All Rights Reserved.</p>
+                <p>The Windows 8 operating system and its user interface are protected by trademark and other pending or exisitng intellectual property rights in the United States and other countries/regions.</p>
+                <br>
+                <p>Evaluation Copy. Expires on 2014-01-31 01:59</p>
+                <br>
+                <p style="color: #f00;">Unauthorized use or disclosure in any manner may result in disciplinary action up to and including termination of employment (in case of employees), termination of assignment or contract (in case of contingent staff), and potential civil criminal liability.</p>
+                <br>
+                <p>This product is licensed under <span style="color: #00aff0; text-decoration: underline;">Microsoft Software License Terms</span> to:</p>
+                <br>
+                <button class="btn-ok">OK</button>
+            </div>
+        </div>
+        
+        <div class="app specifics inactive" id="specifics">
+            <div class="title">
+                <p>Project Specifics</p>
+            </div>
+            <ul class="action-buttons">
+                <li class="close" title="Close"><i class="ionicons ion-android-close"></i></li>
+                <li class="maximize" title="Maximize"><i class="ionicons ion-android-checkbox-outline-blank"></i></li>
+                <li class="minimize" title="Minimize"><i class="ionicons ion-ios-minus-empty"></i></li>
+            </ul>
+            <div class="container">
+                <p class="head"><i class="ionicons ion-settings"></i> Features</p>
+                <div class="divider"></div>
+                <p class="built" data-tooltip="Built with tools and love"><i class="ionicons ion-code"></i> <i class="ionicons ion-wrench"></i> <i class="ionicons ion-android-favorite" style="color: #ff0000;"></i>.</p>
+                <p>Built using modern HTML5, CSS3 and jQuery framework alognwith support for all modern browsers including Chrome, Firefox and IE. Please switch to full screen mode for best experience.</p>
+                <h2><i class="ionicons ion-code"></i> Brackets is more than awesome</h2>
+                <p>The entire project has been coded in the new and awesome Adobe Brackets 1.3</p>
+                <h2><i class="ionicons ion-social-sass"></i> SASS Preprocessed</h2>
+                <p>CSS3 has been coded via CSS Preprocessor SASS. Also, the project features an intensive use of CSS3 and its features. You will find custom CSS tooltips, modified context-menus, cool transformations, smooth transitions, and a whole bunch of beautiful components.</p>
+                <h2><i class="ionicons ion-social-javascript"></i> jQuery completes the magic</h2>
+                <p>Using jQuery to control the entire sequence and to integrate functionality within this project.</p>
+                <h2><i class="ionicons ion-arrow-move"></i> Drag n drop!</h2>
+                <p>Uses the jQuery UI Draggable plugin for allowing rearrangement of metro ui tiles and desktop icons and for dragging window applications.</p>
+                <h2><i class="ionicons ion-android-apps"></i> Icons brings it to life!</h2>
+                <p>All the icons (except the Brackets icon) have been served from Ionicons library.</p>
+                <h2><i class="ionicons ion-iphone"></i> How about smartphones?</h2>
+                <p>All components have been carefully sized to adapt a responsive environment. Therefore, windows web 8 performs as awesome even when you zoom-in zoom-out or even if you are viewing this project on your smartphone or tablet.</p>
+                <h2><i class="ionicons ion-load-c"></i> Boot Loader</h2>
+                <p>The Pacejs has integrated with the boot screen, so that the boot process only finishes once everything is loaded. That takes the user experience to greater heights.</p>
+            </div>
+        </div>
+        
+        <div class="app share inactive" id="share">
+            <div class="title">
+                <p>Share This</p>
+            </div>
+            <ul class="action-buttons">
+                <li class="close" title="Close"><i class="ionicons ion-android-close"></i></li>
+                <li class="maximize disabled" title="Maximize"><i class="ionicons ion-android-checkbox-outline-blank"></i></li>
+                <li class="minimize" title="Minimize"><i class="ionicons ion-ios-minus-empty"></i></li>
+            </ul>
+            <div class="container">
+                <p class="head"><i class="ionicons ion-android-share-alt"></i> Share</p>
+                <div class="divider"></div>
+                <p>You can also find this project on Behance at : <br><a href="http://www.behance.net/kishlaya" target="_blank" style="color: #00bcf2; text-decoration: underline;">behance.net/kishlaya</a></p>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="app copyright inactive" id="copyright">
+            <div class="title">
+                <p>Protection</p>
+            </div>
+            <div class="container">
+                <p class="head"><i class="ionicons ion-ios-copy"></i> Copyright Info</p>
+                <div class="divider"></div>
+                <p class="copyright" ><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Windows Web 8.0</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Kishlaya Jaiswal</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+                <p>&copy; 2015 Kishlaya Jaiswal. All Rights Reserved.</p><br>
+            </div>
+        </div>
+        
+        <div class="app alert">
+           <div class="title">
+               <p>&nbsp;</p>
+           </div>
+            <ul class="action-buttons">
+                <li class="close" title="Close"><i class="ionicons ion-android-close"></i></li>
+            </ul>
+            <div class="container">
+                <p><i class="ionicons ion-alert"></i> This app is not currently accessible in this version.</p>
+                <br>
+                <button class="btn-ok">OK</button>
+            </div>
+        </div>
+        
+        <!-- CONTEXT MENU -->
+        <ul class="context-menu">
+           <li>
+               View <i class="ionicons ion-android-arrow-dropright"></i>
+               <ul>
+                   <li id="largeIcons"><input type="radio"> Large Icons</li>
+                   <li id="mediumIcons"><input type="radio" checked> Medium Icons</li>
+                   <li id="smallIcons"><input type="radio"> Small Icons</li>
+                   <li class="divider"></li>
+                   <li id="arrangeIcons"><input type="checkbox"> Auto arrange icons</li>
+                   <li class="disabled">Align icons to grid</li>
+                   <li class="divider"></li>
+                   <li id="toggleIcons"><input type="checkbox" checked="true"> Show desktop icons</li>
+               </ul>
+           </li>
+           <li>
+               Sort By <i class="ionicons ion-android-arrow-dropright"></i>
+               <ul>
+                   <li>Name</li>
+                   <li>Size</li>
+                   <li>Item type</li>
+                   <li>Date modified</li>
+               </ul>
+           </li>
+           <li>Refresh</li>
+           <li class="divider"></li>
+           <li class="disabled">Paste</li>
+           <li class="disabled">Paste Shortcut</li>
+           <li class="divider"></li>
+           <li>
+               New <i class="ionicons ion-android-arrow-dropright"></i>
+               <ul>
+                   <li>Folder</li>
+                   <li>Contact</li>
+                   <li class="divider"></li>
+                   <li>Contact</li>
+                   <li>Microsoft Word Document</li>
+                   <li>Journal Document</li>
+                   <li>Microsoft Powerpoint Presentation</li>
+                   <li>WinRAR Archive</li>
+                   <li>Text Document</li>
+                   <li>Microsoft Excel Worksheet</li>
+                   <li>WinRAR ZIP Archive</li>
+               </ul>
+           </li>
+           <li class="divider"></li>
+           <li>Screen Resolution</li>
+           <li>Personalize</li>
+       </ul>
+        
+        <!-- AUDIOS -->
+        <audio id="windows-boot-audio">
+            <source src="sounds/tada.wav" type="audio/wav">
+        </audio>
+        <audio id="windows-logon-audio">
+           <source src="sounds/WindowsLogon.wav" type="audio/wav">
+       </audio>
+       <audio id="windows-logoff-audio">
+           <source src="sounds/WindowsLogoff.wav" type="audio/wav">
+       </audio>
+       <audio id="windows-shutdown-audio">
+           <source src="sounds/WindowsShutdown.wav" type="audio/wav">
+       </audio>
+       <audio id="windows-error-audio">
+           <source src="sounds/WindowsError.wav" type="audio/wav">
+       </audio>
+    </body>
+</html>
